@@ -1,0 +1,15 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿJ$78edf617-b84b-45db-bacc-c82be41e4a15
+‹
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8Ñç Ğ—2J$acc39841-a757-4fcb-9f70-2d6f97aae62a
+
+java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8Ñç Ğ—2J$05c0f892-a8a3-4d39-b0d8-c47e94c052a0
+›	java:S116"TRename this field "QueueName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¥ã¼øÿÿÿÿ8´¹ Ğ—2J$afd40839-0c9e-400a-a580-4f9109197b8f
+i
+java:S1170"!Make this final field static too.(•¸Ùèùÿÿÿÿ8ù™Î—2J$ba55225a-719e-4c99-aa75-58da94079ade
+i
+java:S1170"!Make this final field static too.(”¥ã¼øÿÿÿÿ8”¾ùÏ—2J$f5581c4b-b340-40fb-9411-da4eac0ffede
+˜
+java:S1858!"P"operationType" is already a string, there's no need to call "toString()" on it.(¶œ™üÿÿÿÿ8Š¡˜Î—2J$fea570e5-f099-4369-9f11-e2795b627cbc
+
+java:S4719""9Replace charset name argument with StandardCharsets.UTF_8(”ïØ¯ùÿÿÿÿ8Œ¡˜Î—2J$ee65093c-4a10-443b-947a-a48779359c61

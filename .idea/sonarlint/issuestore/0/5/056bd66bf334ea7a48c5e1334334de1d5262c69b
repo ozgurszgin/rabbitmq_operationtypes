@@ -1,0 +1,24 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8Ş²˜Ğ—2J$b0b26d9c-d69f-4ed6-b270-8edcb0b52a66
+z
+java:S2629E"7Use the built-in formatting to construct this argument.(„ü³ü8à²˜Ğ—2J$ad0c3552-f3de-48f1-ac56-320e22fc4af0
+
+java:S2095q"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8á²˜Ğ—2J$d92cdd55-9a7a-4862-a318-628280f38364
+‹
+java:S2095p"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8á²˜Ğ—2J$054b3512-629f-4809-b85c-94f3ed0f86c7
+
+java:S2095%"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8ÿ¿¨Ğ—2J$9e6c95ea-ef38-42be-b55b-57013f138934
+‹
+java:S2095$"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8ÿ¿¨Ğ—2J$67dcbe78-4c6b-47ac-9d7d-17017077dcf8
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â²˜Ğ—2J$2044e476-a82d-4d31-9920-620509867fcd
+|
+java:S47191"9Replace charset name argument with StandardCharsets.UTF_8(ò”®ª8ë²˜Ğ—2J$cf69e7c7-012e-4156-8415-a281ba48be7a
+„
+java:S3457E"AFormat specifiers should be used instead of string concatenation.(„ü³ü8ğ²˜Ğ—2J$e5fb8d5c-7009-4483-a5b7-864fa7ca7b8f
+
+java:S2159G"VRemove this call to "equals"; comparisons between unrelated types always return false.(ò¯ˆŒúÿÿÿÿ8ğ²˜Ğ—2J$db774cf5-02b9-4e75-ba6a-432d50279212
+
+java:S2159J"VRemove this call to "equals"; comparisons between unrelated types always return false.(—£è¾ıÿÿÿÿ8ñ²˜Ğ—2J$de2e9472-8856-4575-855e-b00bcd62b16f
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ŒÀ¨Ğ—2J$14c2b38a-b74b-4df0-abcf-9c5394c4a7d3

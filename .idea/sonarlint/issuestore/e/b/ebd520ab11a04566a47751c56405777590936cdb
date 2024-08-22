@@ -1,0 +1,6 @@
+
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æž³ÿÿÿÿÿJ$3f97c5c6-c730-42f8-999b-1ec5a69d7249
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÖŒŒÊ—2J$c753ee7b-1720-4c3b-8f1a-031788bd999b
+c
+java:S1128"ARemove this unused import 'org.example.service.BlockedIpService'.(˜ØªÁùÿÿÿÿ8™ðýÐ—2

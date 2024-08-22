@@ -1,0 +1,8 @@
+
+x
+java:S2629"7Use the built-in formatting to construct this argument.(Åğ±œøÿÿÿÿJ$1a15cb08-1768-4aa0-ba65-5cf5b27cbcbb
+‚
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(õ‰ÿÇşÿÿÿÿJ$0de85935-7461-4287-a25d-8336a2105823
+‚	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’ÍùÿÿÿÿJ$a1ac1146-9f4f-4571-8f0c-1b7f751f56f5
+‚
+java:S3457"AFormat specifiers should be used instead of string concatenation.(Åğ±œøÿÿÿÿJ$4452582e-c526-4d7d-a097-69ca0b81c3a0
