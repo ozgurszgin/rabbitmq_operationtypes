@@ -7,8 +7,6 @@ m
 =src/main/java/org/example/repository/BlockedIpRepository.java,e\4\e41afebd43eac02d9fc230478f45e68ce9eaa3ed
 c
 3src/main/java/org/example/entity/OperationType.java,5\4\5465c3e1e9359fdbee0a048d5761a428a4d95583
-i
-9src/main/java/org/example/service/IpPublisherService.java,a\5\a5efe23495db5d782c8cdaf8703e65e3d629fb0a
 `
 0src/main/java/org/example/rabbitmq/Producer.java,2\d\2d395a79883408b8ee196bbdb7d7b901379cc044
 m
@@ -31,8 +29,6 @@ b
 2src/main/java/org/example/service/FileService.java,9\1\9105055fd314e0b412051ea26a5ab4978f197d38
 Å
 Q.idea/sonarlint/securityhotspotstore/5/4/5465c3e1e9359fdbee0a048d5761a428a4d95583,9\e\9eb5eae672d086e16abbc7a58b8ffc1cc5099301
-Å
-Q.idea/sonarlint/securityhotspotstore/a/5/a5efe23495db5d782c8cdaf8703e65e3d629fb0a,8\0\80151dfecba2c466a0cd374cf10aaa4a05232430
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
 Å

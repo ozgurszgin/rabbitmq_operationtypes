@@ -4,6 +4,7 @@ package org.example.MessageService;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import org.example.entity.OperationType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -16,11 +17,11 @@ public class MessageSender {
 
     private static final Logger logger = LoggerFactory.getLogger(MessageSender.class);
 
-    private final String exchangeName = "exchange_name";
+    private final String exchangeName = "blockedIp.exchange";
 
-    private final String QueueName="Messages";
+    private final String routingKey="MessagesKey";
 
-    public void sendMessage(String operationType, String queueNamePattern) {
+    public void sendMessage(OperationType operationType, String queueNamePattern, int lastIpId) {
         ConnectionFactory factory = new ConnectionFactory();
         factory.setHost("localhost");
 
@@ -29,10 +30,11 @@ public class MessageSender {
             Channel channel = connection.createChannel();
 
             channel.exchangeDeclare(exchangeName, "topic");
-            channel.queueDeclare(QueueName, true, false, false, null);
-            String message = operationType.toString() + " " + queueNamePattern;
-            channel.basicPublish(exchangeName, QueueName, null, message.getBytes("UTF-8"));
-            logger.info("Sent message: '{}' to exchange: '{}' with queue pattern: '{}'", message, exchangeName, queueNamePattern);
+           // channel.queueDeclare(queueName, true, false, false, null);
+           // String routingKey = queueNamePattern + "." + operationType;
+            String message = operationType + " " + queueNamePattern + " " + lastIpId;
+            channel.basicPublish(exchangeName, routingKey, null, message.getBytes("UTF-8"));
+            logger.info("Sent message: '{}' to exchange: '{}'", message, exchangeName);
 
             channel.close();
             connection.close();

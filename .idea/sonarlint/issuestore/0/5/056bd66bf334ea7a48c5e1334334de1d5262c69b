@@ -1,24 +1,33 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8Ş²˜Ğ—2J$b0b26d9c-d69f-4ed6-b270-8edcb0b52a66
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8²é ˆœ2J$e96a1c87-9076-4e34-845c-706c67ffeb4e
 z
-java:S2629E"7Use the built-in formatting to construct this argument.(„ü³ü8à²˜Ğ—2J$ad0c3552-f3de-48f1-ac56-320e22fc4af0
-
-java:S2095q"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8á²˜Ğ—2J$d92cdd55-9a7a-4862-a318-628280f38364
-‹
-java:S2095p"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8á²˜Ğ—2J$054b3512-629f-4809-b85c-94f3ed0f86c7
-
-java:S2095%"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8ÿ¿¨Ğ—2J$9e6c95ea-ef38-42be-b55b-57013f138934
-‹
-java:S2095$"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8ÿ¿¨Ğ—2J$67dcbe78-4c6b-47ac-9d7d-17017077dcf8
+java:S2629j"7Use the built-in formatting to construct this argument.(ı„† 8´é ˆœ2J$0353fbfa-0ad5-4848-ba7a-e8067e1a468d
+	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•æ©ˆœ2J$3e9488c9-bdde-46f4-8ae2-846fb182ab77
+d
+java:S1170"!Make this final field static too.(¦Ú¯ü8µé ˆœ2J$645311dd-d17d-4f38-8ccd-6bf23f25a7f0
+i
+java:S1170"!Make this final field static too.(„õ¹ïùÿÿÿÿ8µé ˆœ2J$076635d9-93da-436f-9661-f3f62d82c4da
+i
+java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8µé ˆœ2J$01b53e12-e4df-4ad0-92c6-074c98041539
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8â²˜Ğ—2J$2044e476-a82d-4d31-9920-620509867fcd
-|
-java:S47191"9Replace charset name argument with StandardCharsets.UTF_8(ò”®ª8ë²˜Ğ—2J$cf69e7c7-012e-4156-8415-a281ba48be7a
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8µé ˆœ2J$28004bc3-d07d-44dc-b39d-dbadd15cb83c
+œ
+java:S1450 "YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8¶é ˆœ2J$83317cdd-2d33-41fe-8450-119919eafc8b
 „
-java:S3457E"AFormat specifiers should be used instead of string concatenation.(„ü³ü8ğ²˜Ğ—2J$e5fb8d5c-7009-4483-a5b7-864fa7ca7b8f
-
-java:S2159G"VRemove this call to "equals"; comparisons between unrelated types always return false.(ò¯ˆŒúÿÿÿÿ8ğ²˜Ğ—2J$db774cf5-02b9-4e75-ba6a-432d50279212
-
-java:S2159J"VRemove this call to "equals"; comparisons between unrelated types always return false.(—£è¾ıÿÿÿÿ8ñ²˜Ğ—2J$de2e9472-8856-4575-855e-b00bcd62b16f
-s
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8ŒÀ¨Ğ—2J$14c2b38a-b74b-4df0-abcf-9c5394c4a7d3
+java:S3457-"AFormat specifiers should be used instead of string concatenation.(—ò¶8¹é ˆœ2J$ebc55a52-9a8d-4219-bcd9-26a2f6069a32
+¡
+java:S2142>"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8Ÿæ©ˆœ2J$b4fa024d-dbb1-481c-8d02-9b3f5e5eb55e
+‰
+java:S3457="AFormat specifiers should be used instead of string concatenation.(ÍÒïûûÿÿÿÿ8¼é ˆœ2J$33c6d276-ec0c-498d-b6ad-966afb641345
+„
+java:S1117M"<Rename "lastIpId" which hides the field declared at line 26.(»Ó‰üÿÿÿÿ8¾é ˆœ2J$8769d2a1-5ab1-453b-b773-e27236fdb76c
+…
+java:S1117]"=Rename "queueName" which hides the field declared at line 29.(úÒ±úÿÿÿÿ8¿é ˆœ2J$35da2dd8-ab90-4ca4-9c7f-ec62bc3ad240
+„
+java:S3457j"AFormat specifiers should be used instead of string concatenation.(ı„† 8Àé ˆœ2J$8ab27240-7ac4-4814-985b-a5542ff71aaa
+„	java:S125€"<This block of commented-out lines of code should be removed.(ŸöĞÿÿÿÿÿ8Ãé ˆœ2J$76ddd41d-c763-49f7-87da-1142d5545dc1
+„	java:S125¼"<This block of commented-out lines of code should be removed.(ª»Èîüÿÿÿÿ8Ãé ˆœ2J$ea3534dd-e584-4b46-99a3-cf3c26a0507b
+	java:S125Ê"<This block of commented-out lines of code should be removed.(ú¯æ8Ãé ˆœ2J$9442dc54-e024-456c-9fdf-80470cff1ec3
+	java:S125Ü"<This block of commented-out lines of code should be removed.(ú¯æ8Äé ˆœ2J$20bf023a-7f80-409d-aa1c-8d0e146d0a21
+t
+java:S1068",Remove this unused "lastIpId" private field.(èØèÇüÿÿÿÿ8Äé ˆœ2J$2eed3482-4052-4061-84b6-a647273c2a14

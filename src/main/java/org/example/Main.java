@@ -2,6 +2,10 @@ package org.example;
 
 import org.example.MessageService.MessageReceiver;
 import org.example.MessageService.MessageSender;
+import org.example.entity.OperationType;
+import org.example.rabbitmq.Consumer1;
+import org.example.rabbitmq.Consumer2;
+import org.example.rabbitmq.Consumer3;
 import org.example.repository.BlockedIpRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -10,35 +14,50 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        ConfigurableApplicationContext context = SpringApplication.run(Main.class, args);
-        BlockedIpRepository blockedIpRepository=context.getBean(BlockedIpRepository.class);
 
-        MessageSender messageSender=new MessageSender();
-        MessageReceiver messageReceiver=new MessageReceiver(blockedIpRepository);
-        Thread messageSenderThread = new Thread(() -> {
+        ConfigurableApplicationContext context = SpringApplication.run(Main.class, args);
+        Consumer3 consumer3 = context.getBean(Consumer3.class);
+        Consumer1 consumer1 = context.getBean(Consumer1.class);
+        Consumer2 consumer2 = context.getBean(Consumer2.class);
+        MessageReceiver messageReceiver = context.getBean(MessageReceiver.class);
+        Thread startConsumer1Thread = new Thread(() -> {
             try {
-                messageSender.sendMessage("getall","getall.*");
+                consumer1.startConsumer();
             } catch (Exception e) {
                 e.printStackTrace();
-            }            try {
-                Thread.sleep(20000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
             }
-        });Thread messageReceiverThread = new Thread(() -> {
+        });
+        Thread startConsumer2Thread = new Thread(() -> {
+            try {
+                consumer2.startConsumer();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        Thread startConsumer3Thread = new Thread(() -> {
+            try {
+                consumer3.startConsumer();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        Thread messageListenerThread = new Thread(() -> {
             try {
                 messageReceiver.listenForMessages();
             } catch (Exception e) {
                 e.printStackTrace();
             }
             try {
-                Thread.sleep(2000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
-            messageSenderThread.start();
-            messageReceiverThread.start();
+        startConsumer3Thread.start();
+        startConsumer2Thread.start();
+        startConsumer1Thread.start();
+        messageListenerThread.start();
+
     }
 }

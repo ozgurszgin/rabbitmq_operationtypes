@@ -11,7 +11,7 @@ import java.io.IOException;
 
 @Service
 public class FileService {
-    private static final String FILE_PATH = "E:\\blocked_ip\\src\\main\\resources\\";
+    private static final String FILE_PATH = "E:\\rabbitmq_operationtypes\\src\\main\\resources\\";
     private static final Logger logger = LoggerFactory.getLogger(FileService.class);
 
     public synchronized void writeToFile(String content,String filename) {

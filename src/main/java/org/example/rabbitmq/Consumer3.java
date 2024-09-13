@@ -4,7 +4,9 @@ import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
+import org.example.MessageService.MessageSender;
 import org.example.entity.BlockedIp;
+import org.example.entity.OperationType;
 import org.example.service.FileService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,16 +26,20 @@ import java.util.concurrent.TimeoutException;
 public class Consumer3 {
 
     private static final Logger logger = LoggerFactory.getLogger(Consumer3.class);
-    private static final String EXCHANGE_NAME = "fanout_ips";
-    private static final String QUEUE_NAME = "ip_queue3";
-
+    private static final String EXCHANGE_NAME = "blockedIp.exchange";
     private Connection connection;
     private Channel channel;
 
     @Autowired
-    FileService fileService;
+    private FileService fileService;
 
-    public void consumeFanoutMessages()  {
+    @Autowired
+    private MessageSender messageSender;
+
+    int lastPID = 1000;
+    private boolean hasRestarted = true;
+
+    public void startConsumer() {
         ExecutorService executor = Executors.newSingleThreadExecutor();
         executor.submit(() -> {
             while (true) {
@@ -42,27 +48,57 @@ public class Consumer3 {
                         connectToRabbitMQ();
                     }
 
-                    DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-                        byte[] body = delivery.getBody();
-                        try (ByteArrayInputStream bis = new ByteArrayInputStream(body);
-                             ObjectInputStream ois = new ObjectInputStream(bis)) {
-                            BlockedIp blockedIp = (BlockedIp) ois.readObject();
-                            fileService.writeToFile(blockedIp.toString(), QUEUE_NAME);
-                            logger.info("BlockedIp " + blockedIp.getIp() + QUEUE_NAME+ "'in listesine yazıldı.");
+                    String queueName;
+                    if (hasRestarted) {
+                        queueName = generateUniqueQueueName("consumer3_getall");
+                        sendGetAllMessage(queueName);
+                        hasRestarted = false;
+                    } else {
+                        queueName = "consumer3_add";
+                        sendAddMessage(queueName);
+                    }
 
-                            channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
-                        } catch (ClassNotFoundException | IOException e) {
-                            logger.error("Mesaj işleme hatası: " + e.getMessage());
-                            channel.basicNack(delivery.getEnvelope().getDeliveryTag(), false, true);
-                        }
-                    };
-
-                    channel.basicConsume(QUEUE_NAME, false, deliverCallback, consumerTag -> {});
+                    Thread.sleep(20000);
+                    consumeMessages(queueName);
                 } catch (IOException e) {
-                    logger.error("Tüketici hatası: " + e.getMessage());
+                    logger.error("Consumer3 hatası: " + e.getMessage());
                     reconnectToRabbitMQ();
                 }
+
+                try {
+                    Thread.sleep(20000); // Bir süre bekleyip tekrar dene
+                } catch (InterruptedException e) {
+                    logger.error("Consumer interrupted", e);
+                }
             }
+        });
+    }
+
+    private void consumeMessages(String queueName) throws IOException, InterruptedException {
+        try {
+            channel.queueDeclarePassive(queueName);
+            channel.queueBind(queueName, EXCHANGE_NAME, queueName);
+            logger.info("Consumer3 queue başarıyla bind edildi: " + queueName);
+        } catch (IOException e) {
+            logger.error("Consumer3 queue bind hatası: " + e.getMessage(), e);
+            throw e;
+        }
+        Thread.sleep(5000);
+        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
+            byte[] body = delivery.getBody();
+            try (ByteArrayInputStream bis = new ByteArrayInputStream(body);
+                 ObjectInputStream ois = new ObjectInputStream(bis)) {
+                BlockedIp blockedIp = (BlockedIp) ois.readObject();
+                fileService.writeToFile(blockedIp.toString(), queueName); // Mesajı dosyaya yaz
+                logger.info("Consumer3 BlockedIp " + blockedIp.getIp() + " " + queueName + "'in listesine yazıldı.");
+
+                channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+            } catch (ClassNotFoundException | IOException e) {
+                logger.error("Consumer3 Mesaj işleme hatası: " + e.getMessage());
+                channel.basicNack(delivery.getEnvelope().getDeliveryTag(), false, true);
+            }
+        };
+        channel.basicConsume(queueName, false, deliverCallback, consumerTag -> {
         });
     }
 
@@ -74,13 +110,10 @@ public class Consumer3 {
             args.put("x-max-priority", 10);
             connection = factory.newConnection();
             channel = connection.createChannel();
-
-            channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
-            channel.queueDeclare(QUEUE_NAME, true, false, false, args);
-            channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "");
-            logger.info("RabbitMQ'ya bağlanıldı");
+            channel.exchangeDeclare(EXCHANGE_NAME, "topic");
+            logger.info("Consumer3 RabbitMQ'ya bağlanıldı");
         } catch (IOException | TimeoutException e) {
-            logger.error("RabbitMQ'ya bağlanırken hata: " + e.getMessage());
+            logger.error("Consumer3 RabbitMQ'ya bağlanırken hata: " + e.getMessage());
         }
     }
 
@@ -93,9 +126,21 @@ public class Consumer3 {
                 connection.close();
             }
         } catch (IOException | TimeoutException e) {
-            logger.error("Bağlantıyı kapatırken hata: " + e.getMessage());
+            logger.error("Consumer3 Bağlantıyı kapatırken hata: " + e.getMessage());
         }
         connectToRabbitMQ();
-        logger.info("RabbitMQ'ya yeniden bağlanıldı.");
+        logger.info("Consumer3 RabbitMQ'ya yeniden bağlanıldı.");
+    }
+
+    private String generateUniqueQueueName(String baseName) {
+        return baseName + "." + System.currentTimeMillis();
+    }
+
+    private void sendGetAllMessage(String queueNamePattern) {
+        messageSender.sendMessage(OperationType.GETALL, queueNamePattern, lastPID);
+    }
+
+    private void sendAddMessage(String queueName) {
+        messageSender.sendMessage(OperationType.ADD, queueName, lastPID);
     }
 }

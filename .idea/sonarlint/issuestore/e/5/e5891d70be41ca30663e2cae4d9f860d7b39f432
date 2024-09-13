@@ -1,15 +1,13 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿJ$78edf617-b84b-45db-bacc-c82be41e4a15
-‹
-java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8Ñç Ğ—2J$acc39841-a757-4fcb-9f70-2d6f97aae62a
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿJ$d97df3ae-a5e3-4349-91da-2f724f437af2
 
-java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8Ñç Ğ—2J$05c0f892-a8a3-4d39-b0d8-c47e94c052a0
-›	java:S116"TRename this field "QueueName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”¥ã¼øÿÿÿÿ8´¹ Ğ—2J$afd40839-0c9e-400a-a580-4f9109197b8f
+java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8±À¶ê›2J$13fb3448-a3b3-458d-81a0-641c9442f0c6
+‹
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8±À¶ê›2J$79d9745f-3a41-4a24-92f6-f9d0a58ae0a2
+d
+java:S1170"!Make this final field static too.(¦Ú¯ü8çæ·æ›2J$88266f60-005d-43f0-ac53-641dfa003ebf
 i
-java:S1170"!Make this final field static too.(•¸Ùèùÿÿÿÿ8ù™Î—2J$ba55225a-719e-4c99-aa75-58da94079ade
-i
-java:S1170"!Make this final field static too.(”¥ã¼øÿÿÿÿ8”¾ùÏ—2J$f5581c4b-b340-40fb-9411-da4eac0ffede
-˜
-java:S1858!"P"operationType" is already a string, there's no need to call "toString()" on it.(¶œ™üÿÿÿÿ8Š¡˜Î—2J$fea570e5-f099-4369-9f11-e2795b627cbc
-
-java:S4719""9Replace charset name argument with StandardCharsets.UTF_8(”ïØ¯ùÿÿÿÿ8Œ¡˜Î—2J$ee65093c-4a10-443b-947a-a48779359c61
+java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8¡Á…ˆœ2J$6b495b0e-69aa-40b5-bc9b-b41550852530
+ƒ	java:S125!"<This block of commented-out lines of code should be removed.(ËÁ½ùÿÿÿÿ8–ÔÀç›2J$a946d2ff-2960-40cd-9571-ce2345152b7f
+|
+java:S4719$"9Replace charset name argument with StandardCharsets.UTF_8(šŒ¯ê8…¢ºæ›2J$9673ce7b-dfc2-4afd-9cdb-f153bef3933f
