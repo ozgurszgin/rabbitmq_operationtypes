@@ -6,6 +6,7 @@ import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.DeliverCallback;
 import org.example.MessageService.MessageSender;
 import org.example.entity.BlockedIp;
+import org.example.entity.Message;
 import org.example.entity.OperationType;
 import org.example.service.FileService;
 import org.slf4j.Logger;
@@ -138,14 +139,22 @@ public class Consumer2 {
     }
 
     private String generateUniqueQueueName(String baseName) {
-        return baseName + "." + System.currentTimeMillis();
+        return baseName + "." + System.currentTimeMillis();//uuid.
     }
 
     private void sendGetAllMessage(String queueNamePattern) {
-        messageSender.sendMessage(OperationType.GETALL, queueNamePattern, lastPID);
+        Message message=new Message();
+        message.setOperationType(OperationType.GETALL);
+        message.setLastIpId(lastPID);
+        message.setQueueNamePattern(queueNamePattern);
+        messageSender.sendMessage(message);
     }
 
     private void sendAddMessage(String queueName) {
-        messageSender.sendMessage(OperationType.ADD, queueName, lastPID);
+        Message message=new Message();
+        message.setOperationType(OperationType.ADD);
+        message.setLastIpId(lastPID);
+        message.setQueueNamePattern(queueName);
+        messageSender.sendMessage(message);
     }
 }

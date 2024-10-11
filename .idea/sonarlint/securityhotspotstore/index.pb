@@ -7,8 +7,6 @@ m
 =src/main/java/org/example/repository/BlockedIpRepository.java,e\4\e41afebd43eac02d9fc230478f45e68ce9eaa3ed
 c
 3src/main/java/org/example/entity/OperationType.java,5\4\5465c3e1e9359fdbee0a048d5761a428a4d95583
-`
-0src/main/java/org/example/rabbitmq/Producer.java,2\d\2d395a79883408b8ee196bbdb7d7b901379cc044
 m
 =src/main/java/org/example/MessageService/MessageReceiver.java,0\5\056bd66bf334ea7a48c5e1334334de1d5262c69b
 k
@@ -40,8 +38,6 @@ Q.idea/sonarlint/securityhotspotstore/0/b/0ba1b9c7a4878802f938e331cc2d8a042087ec
 ]
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 Å
-Q.idea/sonarlint/securityhotspotstore/2/d/2d395a79883408b8ee196bbdb7d7b901379cc044,9\5\952e7d3c33dc2c3168406e60c0bdfcc22be35d3a
-Å
 Q.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec,2\c\2cabb939da04d3de3a200bf2b575690e1a16316d
 Å
 Q.idea/sonarlint/securityhotspotstore/0/5/056bd66bf334ea7a48c5e1334334de1d5262c69b,1\3\13210e6bc24ec4b287f7776cd995216a67fdc1cc
@@ -68,3 +64,5 @@ Q.idea/sonarlint/securityhotspotstore/e/4/e41afebd43eac02d9fc230478f45e68ce9eaa3
 Q.idea/sonarlint/securityhotspotstore/3/d/3dd26e2ec36810be5788a686a05cf539b915c60e,3\8\38a86526e98d3fcd268713628427cb0acf1c728b
 w
 G.idea/sonarlint/issuestore/e/4/e41afebd43eac02d9fc230478f45e68ce9eaa3ed,8\7\872cce932cd7106a23f6c998228ca3e2d6123ed6
+]
+-src/main/java/org/example/entity/Message.java,0\0\00d28b260bdcee997d8db4a521fc3d2cfb9275f3

@@ -1,13 +1,16 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿJ$d97df3ae-a5e3-4349-91da-2f724f437af2
-
-java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8±À¶ê›2J$13fb3448-a3b3-458d-81a0-641c9442f0c6
-‹
-java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8±À¶ê›2J$79d9745f-3a41-4a24-92f6-f9d0a58ae0a2
+˜	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÜÊÍşÿÿÿÿ8ÓíÿÛ§2J$dce98a96-ac06-4c1d-91fd-68fe24c3e215
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8ÖôıÛ§2J$6f6c394e-a43f-4632-81b5-f515af02bd8d
+e
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8¶òÀÜ§2
+g
+java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8¶òÀÜ§2
 d
-java:S1170"!Make this final field static too.(¦Ú¯ü8çæ·æ›2J$88266f60-005d-43f0-ac53-641dfa003ebf
+java:S1170"!Make this final field static too.(¦Ú¯ü8ØôıÛ§2J$c789949c-b1c0-41bc-a63b-8bacc8fe164a
 i
-java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8¡Á…ˆœ2J$6b495b0e-69aa-40b5-bc9b-b41550852530
-ƒ	java:S125!"<This block of commented-out lines of code should be removed.(ËÁ½ùÿÿÿÿ8–ÔÀç›2J$a946d2ff-2960-40cd-9571-ce2345152b7f
-|
-java:S4719$"9Replace charset name argument with StandardCharsets.UTF_8(šŒ¯ê8…¢ºæ›2J$9673ce7b-dfc2-4afd-9cdb-f153bef3933f
+java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8ØôıÛ§2J$f150faf4-827e-4a78-8e45-9e9666151af5
+ƒ	java:S125""<This block of commented-out lines of code should be removed.(ËÁ½ùÿÿÿÿ8ŞôıÛ§2J$1b710d1f-9bc3-4a8a-8277-ad9e0863fa4d
+
+java:S4719%"9Replace charset name argument with StandardCharsets.UTF_8(ºúŞıÿÿÿÿ8¾Ó€Ü§2J$122b0329-5ada-4c61-a799-7c711d0e53e9
+_
+java:S1128"=Remove this unused import 'org.example.entity.OperationType'.(‡‡ÉÈüÿÿÿÿ8½òÀÜ§2

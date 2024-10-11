@@ -1,6 +1,6 @@
 package org.example.entity;
 
 public enum OperationType {
-    GETALL,
+    GETALL, //Tüm ıpleri iste
     ADD;    // Yeni IP'leri ekle
 }

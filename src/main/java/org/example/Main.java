@@ -48,11 +48,6 @@ public class Main {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
         });
         startConsumer3Thread.start();
         startConsumer2Thread.start();

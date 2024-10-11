@@ -1,10 +1,7 @@
 
-	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¤‘²œ2J$bbedbaf9-15ba-4b67-bc90-410ec339fdae
-¡
-java:S21425"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8¨‘²œ2J$6fb474a2-9d80-49ce-8fd6-79cb00d55677
 
-java:S1128"ERemove this unused import 'org.example.MessageService.MessageSender'.(•òŸºüÿÿÿÿ8³ã¶¹œ2J$ed3e376d-3280-4a76-81e6-189535bceed8
+java:S1128"ERemove this unused import 'org.example.MessageService.MessageSender'.(•òŸºüÿÿÿÿ8Ş—¢ÎŸ2J$c75e9230-cec0-4340-9a8f-68d0dea505db
 …
-java:S1128"=Remove this unused import 'org.example.entity.OperationType'.(‡‡ÉÈüÿÿÿÿ8³ã¶¹œ2J$56b71d09-b582-4f5e-a918-466ce42ad09e
+java:S1128"=Remove this unused import 'org.example.entity.OperationType'.(‡‡ÉÈüÿÿÿÿ8ß—¢ÎŸ2J$3ea2ad26-eba0-4743-bf36-09958d7b3686
 
-java:S1128	"GRemove this unused import 'org.example.repository.BlockedIpRepository'.(í‹Üÿÿÿÿÿ8´ã¶¹œ2J$40e85ec9-4eba-4243-b39a-25581e9d6d0b
+java:S1128	"GRemove this unused import 'org.example.repository.BlockedIpRepository'.(í‹Üÿÿÿÿÿ8ß—¢ÎŸ2J$b0acddcc-bc20-443a-a1db-3a2742239882

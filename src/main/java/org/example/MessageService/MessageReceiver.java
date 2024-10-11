@@ -92,7 +92,7 @@ public class MessageReceiver {
     private void createQueueAndAddIps(String queueNamePattern, List<BlockedIp> ips) throws IOException {
         String queueName = queueNamePattern;
 
-        channel.queueDeclare(queueName, false, false, false, null);
+        channel.queueDeclare(queueName, false, false, true, null);
         channel.queueBind(queueName, exchangeName, queueNamePattern);
 
 
