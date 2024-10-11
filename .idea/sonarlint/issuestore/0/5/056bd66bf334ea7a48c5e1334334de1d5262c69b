@@ -1,33 +1,30 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8²é ˆœ2J$9196cb8b-51dd-4905-9e46-d91d34e576bb
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8²é ˆœ2J$377b40df-7f5c-4c88-b5b2-6420ceead854
 z
-java:S2629j"7Use the built-in formatting to construct this argument.(ı„† 8´é ˆœ2J$36fbee93-ae94-4c77-a978-c864c4a7e6d5
-	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•æ©ˆœ2J$95c8784c-9df5-4d8f-b27d-803f2d94fe1b
-d
-java:S1170"!Make this final field static too.(¦Ú¯ü8µé ˆœ2J$d350ca28-68d9-427e-8ec1-9e7648e5afb0
-i
-java:S1170"!Make this final field static too.(„õ¹ïùÿÿÿÿ8µé ˆœ2J$eb7c7766-ddb1-4e99-ae63-f0061d3be6e0
-i
-java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8µé ˆœ2J$5648e0f6-56aa-4b8f-8435-1f0b32103d79
+java:S2629j"7Use the built-in formatting to construct this argument.(®º”œ8´é ˆœ2J$5a915a6f-0feb-4167-a73c-f949d6c8d48d
+	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8•æ©ˆœ2J$4d15b5a9-17b9-4a56-80ad-7f9d49bc32ec
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ìñ¿ßûÿÿÿÿ8ŒëÔÜ§2J$49d394ce-e45d-443c-abc0-50ec7b730ba6
+¡	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(§ Œ˜ÿÿÿÿÿ8‰—ÕÜ§2J$3c1d6f2a-4d76-46f4-890d-d56aadf5f1d9
+œ	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Üõ³Ô8§°ÕÜ§2J$8a8a32bf-fdf5-4c01-adcf-2e8c2c360a35
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8µé ˆœ2J$009f809e-d2e3-4bdf-a3d3-330d9d25a8ae
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8µé ˆœ2J$987b6581-cd1f-4fa1-8d99-48554790c656
 œ
-java:S1450 "YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8¶é ˆœ2J$55900b10-d709-4ba9-88ea-57e49bf8d224
+java:S1450 "YRemove the "connection" field and declare it as a local variable in the relevant methods.(ÿ›ÅÒ8¶é ˆœ2J$48d81277-2528-42d2-9039-a9c07a867cd4
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ìñ¿ßûÿÿÿÿ8ëÔÜ§2J$21fcd8d3-1870-4fc6-8ca9-38020450022e
+
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(§ Œ˜ÿÿÿÿÿ8—ÕÜ§2J$eb961148-62da-427a-8dc9-f98bf9dc97e9
+ˆ
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(Üõ³Ô8ª°ÕÜ§2J$9ae80a1f-f206-4f0b-9069-12815890adea
 „
-java:S3457-"AFormat specifiers should be used instead of string concatenation.(—ò¶8¹é ˆœ2J$fce42ca3-27d0-4003-8275-57470542b339
+java:S3457-"AFormat specifiers should be used instead of string concatenation.(—ò¶8¹é ˆœ2J$c72bbfb6-d3e2-4556-be66-f5432ad655b1
 ¡
-java:S2142>"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8Ÿæ©ˆœ2J$24dc135b-3aa3-4e15-b834-6498e39878d7
+java:S2142>"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8Ÿæ©ˆœ2J$22196198-f335-4792-b759-30aa9f678e59
 ‰
-java:S3457="AFormat specifiers should be used instead of string concatenation.(ÍÒïûûÿÿÿÿ8¼é ˆœ2J$0cfdfe8c-833c-41fe-8de0-9e8316caa97c
+java:S3457="AFormat specifiers should be used instead of string concatenation.(ÍÒïûûÿÿÿÿ8¼é ˆœ2J$a7942b72-b777-4192-97a7-8c47d46ea522
 „
-java:S1117M"<Rename "lastIpId" which hides the field declared at line 26.(»Ó‰üÿÿÿÿ8¾é ˆœ2J$6c7428d3-4b5f-4a87-b4db-2a75b456042e
-…
-java:S1117]"=Rename "queueName" which hides the field declared at line 29.(úÒ±úÿÿÿÿ8¿é ˆœ2J$42032e1e-a484-4924-bb8e-5e2e4bb58113
+java:S1117M"<Rename "lastIpId" which hides the field declared at line 26.(»Ó‰üÿÿÿÿ8¾é ˆœ2J$159045c4-3d8b-40a8-8669-6c67e4cf3a82
 „
-java:S3457j"AFormat specifiers should be used instead of string concatenation.(ı„† 8Àé ˆœ2J$d06d7167-f78b-4f63-9727-93a2f87a10a5
-„	java:S125€"<This block of commented-out lines of code should be removed.(ŸöĞÿÿÿÿÿ8Ãé ˆœ2J$ed627ba5-4f3e-4dea-9926-aeb2be29e723
-„	java:S125¼"<This block of commented-out lines of code should be removed.(ª»Èîüÿÿÿÿ8Ãé ˆœ2J$fcc77d9f-8961-48a7-84d3-b11333b545bb
-	java:S125Ê"<This block of commented-out lines of code should be removed.(ú¯æ8Ãé ˆœ2J$f0e755b8-bd4f-4ffc-8527-d3c9862bf8e0
-	java:S125Ü"<This block of commented-out lines of code should be removed.(ú¯æ8Äé ˆœ2J$0e90b441-d591-430c-b4cc-883bca60a985
+java:S3457j"AFormat specifiers should be used instead of string concatenation.(®º”œ8Àé ˆœ2J$8d0c3115-2196-49cd-a33a-a47295622c92
 t
-java:S1068",Remove this unused "lastIpId" private field.(èØèÇüÿÿÿÿ8Äé ˆœ2J$9ffc5251-988a-4406-99ac-48626edbea8f
+java:S1068",Remove this unused "lastIpId" private field.(èØèÇüÿÿÿÿ8Äé ˆœ2J$d5589342-d81f-488e-b5e5-0238ebf8faef

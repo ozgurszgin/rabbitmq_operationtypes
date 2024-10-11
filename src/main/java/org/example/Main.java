@@ -1,12 +1,9 @@
 package org.example;
 
 import org.example.MessageService.MessageReceiver;
-import org.example.MessageService.MessageSender;
-import org.example.entity.OperationType;
 import org.example.rabbitmq.Consumer1;
 import org.example.rabbitmq.Consumer2;
 import org.example.rabbitmq.Consumer3;
-import org.example.repository.BlockedIpRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
