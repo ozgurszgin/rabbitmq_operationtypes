@@ -1,7 +1,7 @@
 package org.example.MessageService;
 
+import com.rabbitmq.client.Channel;
 import org.example.repository.BlockedIpRepository;
-import org.example.service.BlockedIpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,9 +13,12 @@ public class MessageService {
     @Autowired
     BlockedIpRepository blockedIpRepository;
 
+    @Autowired
+    Channel channel;
+
     public MessageService() {
         this.sender = new MessageSender();
-        this.receiver = new MessageReceiver(blockedIpRepository);
+        this.receiver = new MessageReceiver(blockedIpRepository, channel);
     }
 
     public MessageSender getSender() {

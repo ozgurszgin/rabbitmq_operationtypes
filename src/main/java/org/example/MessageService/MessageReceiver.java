@@ -14,6 +14,7 @@ import org.example.repository.BlockedIpRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -23,17 +24,20 @@ public class MessageReceiver {
     @Autowired
     private final BlockedIpRepository blockedIpRepository;
 
-    private long lastIpId = 1000;
+    long lastIpId = 1000;
     private final static String exchangeName = "blockedIp.exchange";
 
     private final static String queueName = "MessagesQueue";
-    private final static String routingKey="MessagesKey";
+    private final static String routingKey = "MessagesKey";
 
     private Connection connection;
+
     private Channel channel;
 
-    public MessageReceiver(BlockedIpRepository blockedIpRepository) {
+    public MessageReceiver(BlockedIpRepository blockedIpRepository, Channel channel) {
         this.blockedIpRepository = blockedIpRepository;
+
+        this.channel = channel;
     }
 
     public void listenForMessages() {
@@ -54,7 +58,7 @@ public class MessageReceiver {
             channel = connection.createChannel();
             channel.exchangeDeclare(exchangeName, "topic");
             logger.info("MessageReceiver Connected to RabbitMQ");
-            channel.queueDeclare(queueName,true,false,false,null);
+            channel.queueDeclare(queueName, true, false, false, null);
             channel.queueBind(queueName, exchangeName, routingKey);
             Thread.sleep(5000);
         } catch (IOException | TimeoutException e) {
@@ -64,7 +68,12 @@ public class MessageReceiver {
         }
     }
 
-    private void processMessage(String consumerTag, Delivery delivery) throws IOException {
+    @Bean
+    public Channel channel() throws Exception {
+        return connection.createChannel();
+    }
+
+    void processMessage(String consumerTag, Delivery delivery) throws IOException {
         String message = new String(delivery.getBody());
         String[] parts = message.split(" ");
         if (parts.length != 3) {
@@ -83,13 +92,17 @@ public class MessageReceiver {
             createQueueAndAddIps(queueNamePattern, allIps);
         } else if (OperationType.ADD.name().equals(operationType)) {
             List<BlockedIp> newIps = fetchNewIpsFromServer(lastIpId);
+            if (newIps.isEmpty()) {
+                logger.info("No new IPs found.");
+                return;
+            }
             createQueueAndAddIps(queueNamePattern, newIps);
         } else {
             logger.warn("Unknown operation type: {}", operationType);
         }
     }
 
-    private void createQueueAndAddIps(String queueNamePattern, List<BlockedIp> ips) throws IOException {
+    void createQueueAndAddIps(String queueNamePattern, List<BlockedIp> ips) throws IOException {
         String createQueueName = queueNamePattern;
 
         channel.queueDeclare(createQueueName, false, false, true, null);
@@ -107,15 +120,20 @@ public class MessageReceiver {
         }
     }
 
-    private List<BlockedIp> fetchAllIpsFromServer() {
+    List<BlockedIp> fetchAllIpsFromServer() {
         List<BlockedIp> blockedIps = blockedIpRepository.findAll();
-        lastIpId = blockedIps.get(blockedIps.size() - 1).getId();
-        logger.info("Fetched all IPs from server.");
+        if (blockedIps.size() > 0) {
+            lastIpId = blockedIps.get(blockedIps.size() - 1).getId();
+            logger.info("Fetched all IPs from server.");
+            return blockedIps;
+        } else {
+            lastIpId = 0;
+            return blockedIps;
+        }
 
-        return blockedIps;
     }
 
-    private List<BlockedIp> fetchNewIpsFromServer(long lastIpId) {
+    List<BlockedIp> fetchNewIpsFromServer(long lastIpId) {
         List<BlockedIp> newIps = blockedIpRepository.findByIdGreaterThan(lastIpId);
         if (!newIps.isEmpty()) {
             this.lastIpId = newIps.get(newIps.size() - 1).getId();

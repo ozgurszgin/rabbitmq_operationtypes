@@ -1,16 +1,16 @@
 
-˜	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÜÊÍşÿÿÿÿ8ÓíÿÛ§2J$dce98a96-ac06-4c1d-91fd-68fe24c3e215
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8ÖôıÛ§2J$6f6c394e-a43f-4632-81b5-f515af02bd8d
-e
-java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8¶òÀÜ§2
-g
-java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8¶òÀÜ§2
+˜	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÜÊÍşÿÿÿÿ8ÓíÿÛ§2J$d80f399d-8c40-4661-beea-d006c7d06413
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8ÖôıÛ§2J$66a68706-eb62-482b-b6bd-84416af3684c
+
+java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8¶òÀÜ§2J$3e9bb89a-e571-4945-8880-0b71f2fea28b
+‹
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8¶òÀÜ§2J$052bd5b8-c057-4c20-9ff1-97f53ecb73ae
 d
-java:S1170"!Make this final field static too.(¦Ú¯ü8ØôıÛ§2J$c789949c-b1c0-41bc-a63b-8bacc8fe164a
+java:S1170"!Make this final field static too.(¦Ú¯ü8ØôıÛ§2J$93d41338-73f4-4e2d-a1b7-d8039211e285
 i
-java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8ØôıÛ§2J$f150faf4-827e-4a78-8e45-9e9666151af5
-ƒ	java:S125""<This block of commented-out lines of code should be removed.(ËÁ½ùÿÿÿÿ8ŞôıÛ§2J$1b710d1f-9bc3-4a8a-8277-ad9e0863fa4d
+java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8ØôıÛ§2J$6ed8f295-1d21-40cc-98ae-12220a010c85
+ƒ	java:S125""<This block of commented-out lines of code should be removed.(ËÁ½ùÿÿÿÿ8ŞôıÛ§2J$50e60e63-9d0b-453f-a53b-44ad1f1324b1
 
-java:S4719%"9Replace charset name argument with StandardCharsets.UTF_8(ºúŞıÿÿÿÿ8¾Ó€Ü§2J$122b0329-5ada-4c61-a799-7c711d0e53e9
-_
-java:S1128"=Remove this unused import 'org.example.entity.OperationType'.(‡‡ÉÈüÿÿÿÿ8½òÀÜ§2
+java:S4719%"9Replace charset name argument with StandardCharsets.UTF_8(ºúŞıÿÿÿÿ8¾Ó€Ü§2J$9e528c3a-c4a4-474d-ab6b-8b191c8ab6de
+…
+java:S1128"=Remove this unused import 'org.example.entity.OperationType'.(‡‡ÉÈüÿÿÿÿ8½òÀÜ§2J$3cf67bcf-0639-4134-9f81-409192bbfa27

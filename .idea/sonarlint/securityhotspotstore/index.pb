@@ -66,3 +66,5 @@ w
 G.idea/sonarlint/issuestore/e/4/e41afebd43eac02d9fc230478f45e68ce9eaa3ed,8\7\872cce932cd7106a23f6c998228ca3e2d6123ed6
 ]
 -src/main/java/org/example/entity/Message.java,0\0\00d28b260bdcee997d8db4a521fc3d2cfb9275f3
+q
+Asrc/test/java/org/example/MessageService/MessageReceiverTest.java,b\d\bd092cb52b833328d0997311d928d3081a6f93be

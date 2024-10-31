@@ -1,6 +1,6 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æž³ÿÿÿÿÿJ$a444fbbe-6d2e-4b86-bd3e-54ef665e05ea
+š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æž³ÿÿÿÿÿJ$19860496-e8cc-435f-a0d5-434ef03c54e6
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÖŒŒÊ—2J$a3c0fd0f-95cd-4a3d-a98b-03e8fb4dd712
-‰
-java:S1128"ARemove this unused import 'org.example.service.BlockedIpService'.(˜ØªÁùÿÿÿÿ8™ðýÐ—2J$68e84cbd-474e-4b03-9c9a-9f4fb7ce86db
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÖŒŒÊ—2J$7b0ff126-cded-4191-87f7-36c87dea2d05
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÛÓãí­2J$08ce0e2f-7bae-42a0-a5fd-2b6b2d6a3e02
