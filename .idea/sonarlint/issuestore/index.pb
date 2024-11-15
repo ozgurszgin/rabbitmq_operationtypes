@@ -68,3 +68,11 @@ G.idea/sonarlint/issuestore/e/4/e41afebd43eac02d9fc230478f45e68ce9eaa3ed,8\7\87
 -src/main/java/org/example/entity/Message.java,0\0\00d28b260bdcee997d8db4a521fc3d2cfb9275f3
 q
 Asrc/test/java/org/example/MessageService/MessageReceiverTest.java,b\d\bd092cb52b833328d0997311d928d3081a6f93be
+o
+?src/test/java/org/example/MessageService/MessageSenderTest.java,5\0\50fa9a8b31872c7eeabd4a64e4dddd48a54124bf
+e
+5src/test/java/org/example/rabbitmq/Consumer1Test.java,5\e\5edb421521dbc308e5703eada9f205e77bc20f1f
+k
+;src/test/java/org/example/service/BlockedIpServiceTest.java,3\4\341fec5b42a932c812730c2ee533cd6b5c90731f
+u
+Esrc/test/java/org/example/MessageService/RabbitMQIntegrationTest.java,5\e\5ec761e3d106b5e6be6aca61c17c1e56d7b93dfe

@@ -1,16 +1,14 @@
 
-˜	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÜÊÍşÿÿÿÿ8ÓíÿÛ§2J$d80f399d-8c40-4661-beea-d006c7d06413
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8ÖôıÛ§2J$66a68706-eb62-482b-b6bd-84416af3684c
-
-java:S2095"EUse try-with-resources or close this "Channel" in a "finally" clause.(‡î‰´ûÿÿÿÿ8¶òÀÜ§2J$3e9bb89a-e571-4945-8880-0b71f2fea28b
-‹
-java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(“…§Ú8¶òÀÜ§2J$052bd5b8-c057-4c20-9ff1-97f53ecb73ae
+˜	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©ÜÊÍşÿÿÿÿ8¸·¹°¯2J$3e1ee5c7-feb8-43fa-8c26-f9f179e5f02e
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æ³ÿÿÿÿÿ8ÖôıÛ§2J$8a921d64-2803-455b-9c7c-7d259f2ee727
+š	java:S116"XRename this field "exchangeName_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªË¾ü8¼Ùº«°2J$7334b43d-80c3-4bf6-ad75-30654b81b2f0
+˜	java:S116"VRename this field "routingKey_" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Ÿ¿®8¼Ùº«°2J$af6e61c3-3bec-41fd-9b76-8b4e4183268b
 d
-java:S1170"!Make this final field static too.(¦Ú¯ü8ØôıÛ§2J$93d41338-73f4-4e2d-a1b7-d8039211e285
-i
-java:S1170"!Make this final field static too.(ÏÚ­âûÿÿÿÿ8ØôıÛ§2J$6ed8f295-1d21-40cc-98ae-12220a010c85
-ƒ	java:S125""<This block of commented-out lines of code should be removed.(ËÁ½ùÿÿÿÿ8ŞôıÛ§2J$50e60e63-9d0b-453f-a53b-44ad1f1324b1
+java:S1170"!Make this final field static too.(ªË¾ü8¿·¹°¯2J$1917be59-5927-4f6a-93c3-304063ff0823
+d
+java:S1170"!Make this final field static too.(©Ÿ¿®8¿·¹°¯2J$147d9fef-b92e-41c5-9758-a3b10bfb4bab
+ƒ	java:S125!"<This block of commented-out lines of code should be removed.(ËÁ½ùÿÿÿÿ8Ï·¹°¯2J$17a2d8a1-e796-4621-92a2-da3966d76e06
 
-java:S4719%"9Replace charset name argument with StandardCharsets.UTF_8(ºúŞıÿÿÿÿ8¾Ó€Ü§2J$9e528c3a-c4a4-474d-ab6b-8b191c8ab6de
+java:S4719$"9Replace charset name argument with StandardCharsets.UTF_8(ºúŞıÿÿÿÿ8Ñ·¹°¯2J$150b4115-831a-4e1b-86b3-65eddac5ec31
 …
-java:S1128"=Remove this unused import 'org.example.entity.OperationType'.(‡‡ÉÈüÿÿÿÿ8½òÀÜ§2J$3cf67bcf-0639-4134-9f81-409192bbfa27
+java:S1128"=Remove this unused import 'org.example.entity.OperationType'.(‡‡ÉÈüÿÿÿÿ8ïë¼«°2J$90a4400c-4452-4b89-879a-abc60c97e703

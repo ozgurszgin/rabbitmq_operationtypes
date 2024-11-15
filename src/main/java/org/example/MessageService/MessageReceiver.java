@@ -34,10 +34,8 @@ public class MessageReceiver {
 
     private Channel channel;
 
-    public MessageReceiver(BlockedIpRepository blockedIpRepository, Channel channel) {
+    public MessageReceiver(BlockedIpRepository blockedIpRepository) {
         this.blockedIpRepository = blockedIpRepository;
-
-        this.channel = channel;
     }
 
     public void listenForMessages() {
@@ -66,11 +64,6 @@ public class MessageReceiver {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-    }
-
-    @Bean
-    public Channel channel() throws Exception {
-        return connection.createChannel();
     }
 
     void processMessage(String consumerTag, Delivery delivery) throws IOException {
@@ -103,10 +96,9 @@ public class MessageReceiver {
     }
 
     void createQueueAndAddIps(String queueNamePattern, List<BlockedIp> ips) throws IOException {
-        String createQueueName = queueNamePattern;
 
-        channel.queueDeclare(createQueueName, false, false, true, null);
-        channel.queueBind(createQueueName, exchangeName, queueNamePattern);
+        channel.queueDeclare(queueNamePattern, false, false, true, null);
+        channel.queueBind(queueNamePattern, exchangeName, queueNamePattern);
 
 
         for (BlockedIp ip : ips) {
@@ -116,7 +108,7 @@ public class MessageReceiver {
             oos.flush();
             byte[] messageBytes = bos.toByteArray();
             channel.basicPublish(exchangeName, queueNamePattern, null, messageBytes);
-            logger.info("Published IP: " + ip.getIp() + " to queue: " + createQueueName);
+            logger.info("Published IP: " + ip.getIp() + " to queue: " + queueNamePattern);
         }
     }
 

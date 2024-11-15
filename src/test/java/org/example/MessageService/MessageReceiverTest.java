@@ -42,7 +42,6 @@ class MessageReceiverTest {
     private MessageReceiver messageReceiver;
 
 
-
     @BeforeEach
     void setUp() {
 //        MockitoAnnotations.initMocks(this);
@@ -59,14 +58,13 @@ class MessageReceiverTest {
         ip2.setIp(1921681111);
         ip2.setId(12345678);
         List<BlockedIp> allIps = Arrays.asList(ip1, ip2);
-        when(blockedIpRepository.findAll()).thenReturn(allIps);
 
+        when(blockedIpRepository.findAll()).thenReturn(allIps);
 
         List<BlockedIp> result = messageReceiver.fetchAllIpsFromServer();
 
-
         assertEquals(allIps, result);
-        verify(blockedIpRepository, times(1)).findAll(); //times methodun kaç kere çağrıldığını doğrular
+        verify(blockedIpRepository, times(1)).findAll();
         assertEquals(ip2.getId(), messageReceiver.lastIpId);
     }
 
@@ -80,7 +78,6 @@ class MessageReceiverTest {
         ip2.setIp(1921681111);
         ip2.setId(12345678);
         List<BlockedIp> newIps = Arrays.asList(ip1, ip2);
-
 
         when(blockedIpRepository.findByIdGreaterThan(12345676)).thenReturn(newIps);
         List<BlockedIp> result = messageReceiver.fetchNewIpsFromServer(12345676);
@@ -105,7 +102,7 @@ class MessageReceiverTest {
         int lastIpId = 0;
         List<BlockedIp> allIps = Arrays.asList(ip1, ip2);
 
-        String message = operationType + " " + queueNamePattern+" "+lastIpId ;
+        String message = operationType + " " + queueNamePattern + " " + lastIpId;
         Delivery delivery = new Delivery(null, null, message.getBytes());
 
         when(blockedIpRepository.findAll()).thenReturn(allIps);
@@ -131,6 +128,12 @@ class MessageReceiverTest {
         Delivery delivery = new Delivery(null, null, message.getBytes());
 
         when(blockedIpRepository.findByIdGreaterThan(1000)).thenReturn(mockIps);
+        doNothing().when(channel).close();
+        doNothing().when(connection).close();
+        when(channel.queueDeclare(anyString(), anyBoolean(), anyBoolean(), anyBoolean(), isNull())).thenReturn(null);
+//       doNothing().when(channel).basicPublish(anyString(), anyString(), isNull(), any(byte[].class));
+//        doNothing().when(channel).queueBind(anyString(), anyString(), anyString());
+
         messageReceiver.processMessage("ADD", delivery);
 
         verify(channel).queueDeclare(queueNamePattern, false, false, true, null);
@@ -154,7 +157,6 @@ class MessageReceiverTest {
         ip1.setId(12345677);
         List<BlockedIp> mockIpList = Arrays.asList(ip1);
 
-        // Burada mock'lama yapılıyor
         when(messageReceiver.fetchAllIpsFromServer()).thenReturn(mockIpList);
         doNothing().when(messageReceiver).createQueueAndAddIps(anyString(), anyList());
 

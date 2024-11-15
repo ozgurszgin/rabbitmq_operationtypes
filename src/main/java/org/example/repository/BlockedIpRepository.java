@@ -15,4 +15,7 @@ public interface BlockedIpRepository extends JpaRepository<BlockedIp,Long> {
 
     List<BlockedIp> findByIdGreaterThan(long id);
 
+    BlockedIp findTopByOrderByIdDesc();
+
+
 }

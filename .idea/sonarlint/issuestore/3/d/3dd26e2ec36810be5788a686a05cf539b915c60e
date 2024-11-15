@@ -1,27 +1,27 @@
 
 z
-java:S2629Q"7Use the built-in formatting to construct this argument.(ºÖú—8Æ¢ôÛ§2J$a5c783f2-f75c-495a-8e1a-b59d90d05879
+java:S2629Q"7Use the built-in formatting to construct this argument.(ºÖú—8Æ¢ôÛ§2J$a1176511-2d1a-494e-9642-eb23688a242b
 
-java:S2629]"7Use the built-in formatting to construct this argument.(ÄŞ¬øşÿÿÿÿ8Æ¢ôÛ§2J$fb57d355-92bc-48f7-a406-6b41e6474f2c
+java:S2629]"7Use the built-in formatting to construct this argument.(ÄŞ¬øşÿÿÿÿ8Æ¢ôÛ§2J$a0d28251-0b25-4704-82a3-a0a6a6c8a48d
 …
-java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8È¢ôÛ§2J$7e6d31b4-7b45-43e1-b488-9901b944c39a
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8È¢ôÛ§2J$1210f69a-4ba7-4150-b4bc-f7bba5cd93b0
 …
-java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8È¢ôÛ§2J$c9632a3f-5e4e-4669-8878-aa9d6b176c2e
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8È¢ôÛ§2J$c22b0166-81b0-4bd5-a4de-17bad6dbd7d7
 š
-java:S3776+"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(»ŒÕ¼úÿÿÿÿ8Ì¢ôÛ§2J$51475316-69a0-483b-8c33-2b02f1b14a1d
+java:S3776+"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(»ŒÕ¼úÿÿÿÿ8Ïğä¼®2J$257b788c-60e9-4ae1-8afd-1e4428240718
 ‰
-java:S3457A"AFormat specifiers should be used instead of string concatenation.(ıˆÿÿşÿÿÿÿ8Î¢ôÛ§2J$7e080131-8c9b-4468-821b-e682cb4cb536
+java:S3457A"AFormat specifiers should be used instead of string concatenation.(ıˆÿÿşÿÿÿÿ8Ñğä¼®2J$f0e2285c-5043-438e-bd29-8de74f2c4d9b
 ¡
-java:S2142G"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8Î¢ôÛ§2J$e289ae1b-d65f-40a5-a499-bc48786ec976
+java:S2142G"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8òÄõ¼®2J$5d83b840-68b7-47a4-b41d-95fb0bf1b564
 „
-java:S3457Q"AFormat specifiers should be used instead of string concatenation.(ºÖú—8Ï¢ôÛ§2J$bc439573-5067-426a-9ae7-6fbe18d7ddfb
+java:S3457Q"AFormat specifiers should be used instead of string concatenation.(ºÖú—8Ï¢ôÛ§2J$f7988cb0-924a-499e-898e-74ee3974e8aa
 ›
-java:S2139R"XEither log this exception and handle it, or rethrow it with some contextual information.(ï­£Ä8Ğ¢ôÛ§2J$88cda0ff-a59f-46d7-b7e5-5eb31bd742b5
+java:S2139R"XEither log this exception and handle it, or rethrow it with some contextual information.(ï­£Ä8Ğ¢ôÛ§2J$7a913735-293e-4f1c-a2e0-65cdcb53f1a0
 ‰
-java:S3457]"AFormat specifiers should be used instead of string concatenation.(ÄŞ¬øşÿÿÿÿ8Ó¢ôÛ§2J$98a61a66-c5f8-4b81-9074-a924bbe40a57
+java:S3457]"AFormat specifiers should be used instead of string concatenation.(ÄŞ¬øşÿÿÿÿ8Ó¢ôÛ§2J$d03cc06d-3509-4d7c-a08a-f8a79058f22b
 ‰
-java:S3457a"AFormat specifiers should be used instead of string concatenation.(‡°öüÿÿÿÿ8Ô¢ôÛ§2J$f3a5b19b-7414-48d6-a78b-3e786a06a62a
+java:S3457a"AFormat specifiers should be used instead of string concatenation.(‡°öüÿÿÿÿ8Ô¢ôÛ§2J$4858e561-fefc-4b71-ad00-653ceffff9fe
 „
-java:S3457t"AFormat specifiers should be used instead of string concatenation.(Ïø•Ç8Ù¢ôÛ§2J$d970a796-fdcd-43c7-a7bc-63e93ed0f8ad
+java:S3457t"AFormat specifiers should be used instead of string concatenation.(Ïø•Ç8Ù¢ôÛ§2J$a02b495a-d87e-441b-9140-368ea55a948e
 Š
-java:S3457"AFormat specifiers should be used instead of string concatenation.(ºµ¦Êøÿÿÿÿ8Û¢ôÛ§2J$4d7750ef-37dc-42de-8f09-0b597d9a86ec
+java:S3457"AFormat specifiers should be used instead of string concatenation.(ºµ¦Êøÿÿÿÿ8Û¢ôÛ§2J$88e6ca11-8700-4fa1-9375-8e2c08d75071

@@ -13,12 +13,9 @@ public class MessageService {
     @Autowired
     BlockedIpRepository blockedIpRepository;
 
-    @Autowired
-    Channel channel;
-
     public MessageService() {
         this.sender = new MessageSender();
-        this.receiver = new MessageReceiver(blockedIpRepository, channel);
+        this.receiver = new MessageReceiver(blockedIpRepository);
     }
 
     public MessageSender getSender() {

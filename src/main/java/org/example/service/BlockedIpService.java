@@ -37,4 +37,7 @@ public class BlockedIpService  {
     {
         return blockedIpRepository.existsBlockedIpByIp(ip);
     }
-}
+
+    public BlockedIp getLastBlockedIp() {
+        return blockedIpRepository.findTopByOrderByIdDesc();
+    }}

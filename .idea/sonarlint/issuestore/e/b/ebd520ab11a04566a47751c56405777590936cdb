@@ -1,6 +1,6 @@
 
-š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æž³ÿÿÿÿÿJ$19860496-e8cc-435f-a0d5-434ef03c54e6
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·æž³ÿÿÿÿÿ8à€ù»®2J$928803ac-c026-4cd3-a8d5-c7afe011dece
 …
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÖŒŒÊ—2J$7b0ff126-cded-4191-87f7-36c87dea2d05
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÛÓãí­2J$08ce0e2f-7bae-42a0-a5fd-2b6b2d6a3e02
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8ÛÃõ¼®2J$17b91060-a4a0-4b34-ad22-837e447369c8
+€
+java:S1128"8Remove this unused import 'com.rabbitmq.client.Channel'.(¸ÚÐÂýÿÿÿÿ8²Ü×«°2J$5c287ba0-7565-482b-8f6c-d937a4abe06a

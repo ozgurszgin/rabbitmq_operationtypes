@@ -28,17 +28,17 @@ public class Consumer1 {
 
     private static final Logger logger = LoggerFactory.getLogger(Consumer1.class);
     private static final String EXCHANGE_NAME = "blockedIp.exchange";
-    private Connection connection;
-    private Channel channel;
+    Connection connection;
+    Channel channel;
 
     @Autowired
-    private FileService fileService;
+    FileService fileService;
 
     @Autowired
-    private MessageSender messageSender;
+    MessageSender messageSender;
 
     int lastPID = 1000;
-    private boolean hasRestarted = true;
+    boolean hasRestarted = true;
 
     public void startConsumer() {
         ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -75,7 +75,7 @@ public class Consumer1 {
         });
     }
 
-    private void consumeMessages(String queueName) throws IOException, InterruptedException {
+    void consumeMessages(String queueName) throws IOException, InterruptedException {
         try {
             channel.queueBind(queueName, EXCHANGE_NAME, queueName);
             logger.info("Consumer1 queue başarıyla bind edildi: " + queueName);
@@ -102,7 +102,7 @@ public class Consumer1 {
         });
     }
 
-    private void connectToRabbitMQ() {
+    void connectToRabbitMQ() {
         try {
             ConnectionFactory factory = new ConnectionFactory();
             factory.setHost("localhost");
@@ -117,7 +117,7 @@ public class Consumer1 {
         }
     }
 
-    private void reconnectToRabbitMQ() {
+    void reconnectToRabbitMQ() {
         try {
             if (channel != null && channel.isOpen()) {
                 channel.close();
@@ -132,11 +132,11 @@ public class Consumer1 {
         logger.info("Consumer1 RabbitMQ'ya yeniden bağlanıldı.");
     }
 
-    private String generateUniqueQueueName(String baseName) {
+    String generateUniqueQueueName(String baseName) {
         return baseName + "." + System.currentTimeMillis();
     }
 
-    private void sendGetAllMessage(String queueNamePattern) {
+    void sendGetAllMessage(String queueNamePattern) {
         Message message=new Message();
         message.setOperationType(OperationType.GETALL);
         message.setLastIpId(lastPID);
@@ -144,7 +144,7 @@ public class Consumer1 {
         messageSender.sendMessage(message);
     }
 
-    private void sendAddMessage(String queueName) {
+    void sendAddMessage(String queueName) {
         Message message=new Message();
         message.setOperationType(OperationType.ADD);
         message.setLastIpId(lastPID);
